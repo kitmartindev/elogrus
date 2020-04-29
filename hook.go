@@ -3,12 +3,17 @@ package elogrus
 import (
 	"context"
 	"fmt"
+	"log"
 	"strings"
 	"time"
 
 	"github.com/olivere/elastic/v7"
 	"github.com/sirupsen/logrus"
 )
+
+func init() {
+	log.Printf("modified elogrus loaded!")
+}
 
 var (
 	// ErrCannotCreateIndex Fired if the index is not created
